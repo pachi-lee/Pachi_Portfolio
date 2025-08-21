@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website AI Tool</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" href="Pachi.JPG">
+    
+</head>
+<body>
+   <!--navigation bar and sidebar-->
+   <nav class="navbar">
+
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+        <li ><a href="index.html#welcome">Welcome</a></li>
+        <li ><a href="index.html#aboutme">About Me</a></li>
+        <li ><a href="index.html#projects">Projects</a></li>
+        <li ><a href="index.html#resume">Resume</a></li>
+        <li ><a href="index.html#contact">Contact Me</a></li>
+
+    </ul>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+    </div>
+    <div class= "logo">
+<p><a href="index.html">PL</a></p>
+    </div>
+    <div class="navdiv">
+        <ul>
+            <li class="hideOnMobile"><a href="index.html">Welcome</a></li>
+            <li class="hideOnMobile"><a href="index.html#aboutme">About Me</a></li>
+            <li class="hideOnMobile"><a href="index.html#projects">Projects</a></li>
+            <li class="hideOnMobile"><a href="index.html#resume">Resume</a></li>
+            <li class="hideOnMobile"><a href="index.html#contact">Contact Me</a></li>
+            <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-360v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg></li>
+        
+           
+        </ul>
+    </div>
+</nav>
+    
+    <!--My project-->
+    <section>
+          <div class="myprojects">
+
+    <div class="container">
+        <h1 class="project-title">Movie Website with AI Recommending System</h1>
+        <!--carousel-->  
+        <div class="carousel-3d">
+            <div class="carousel-track">
+              <div class="slide"><img src="images/No User with Footer.png" alt=""></div>
+              <div class="slide"><img src="images/Recommendation home.png" alt=""></div>
+              <div class="slide"><img src="images/Search.png" alt=""></div>
+              <div class="slide"><img src="images/moviedetail.png" alt=""></div>
+              <div class="slide"><img src="images/Toast.png" alt=""></div>
+              <div class="slide"><img src="images/User's List.png" alt=""></div>
+              <div class="slide"><img src="images/inList.png" alt=""></div>
+            </div>
+          </div>
+          
+          <div class="carousel-bottom">
+            <div class="carousel-controls">
+              <button class="prev">‹</button>
+              <button class="next">›</button>
+            </div>
+            <div class="carousel-dots"></div>
+          </div>
+                    </div>
+          
+       
+      <!-- LIGHTBOX -->
+  <div class="lightbox">
+    <button class="close">✕</button>
+    <button class="prev">‹</button>
+    <img src="" alt="Expanded view">
+    <button class="next">›</button>
+  </div>
+    <div>
+        <h4>Technical Skills</h4>
+        <ul>
+            <li>HTML, CSS, JavaScript, Python</li>
+            <li>Django, Bootstrap</li>
+            <li>API Data from TMDB</li>
+        </ul>
+        <p>Language: Python, HTML, JavaScript, CSS. Built a full-stack movie site using Django with a built-in AI tool that recommends movies based on users’ ratings. 
+            Used data from The Movie DataBase API to render data like movie titles, movie descriptions, movie ratings, and cast members. 
+             Designed a clean, responsive interface with HTML, CSS, and JavaScript, and used Python Sklearn machine learning algorithms to power the recommendation engine. 
+             Added user accounts, watchlists, and personalized dashboards for a smooth, custom experience.
+             Used pythonanywhere and github repository to deploy website</p>
+            </div>
+   
+      <div class="part">
+      <a href="https://github.com/Pachilee/meme.git" target=_blank title="this takes you to my GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+</div>
+    </section>
+</div>
+<script>
+  const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel-controls .next');
+const prevButton = document.querySelector('.carousel-controls .prev');
+const dotsNav = document.querySelector('.carousel-dots');
+
+const slidesToShow = 3;
+const totalDots = slides.length - slidesToShow + 1;
+let currentIndex = 0;
+
+// Create dots
+for (let i = 0; i < totalDots; i++) {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dotsNav.appendChild(dot);
+}
+const dots = Array.from(dotsNav.children);
+
+function updateCarousel() {
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentIndex].classList.add('active');
+}
+
+nextButton.addEventListener('click', () => {
+  if (currentIndex < totalDots - 1) {
+    currentIndex++;
+    updateCarousel();
+  }
+});
+
+prevButton.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+  }
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});
+
+updateCarousel();
+
+    // ===== LIGHTBOX =====
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const lightboxClose = lightbox.querySelector('.close');
+    const lightboxNext = lightbox.querySelector('.next');
+    const lightboxPrev = lightbox.querySelector('.prev');
+  
+    let lightboxIndex = 0;
+  
+    slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        lightboxIndex = index;
+        openLightbox();
+      });
+    });
+  
+    function openLightbox() {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = slides[lightboxIndex].querySelector('img').src;
+      document.addEventListener('keydown', handleKey); // Enable keyboard nav
+    }
+  
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.removeEventListener('keydown', handleKey); // Disable when closed
+    }
+  
+    function nextLightbox() {
+      lightboxIndex = (lightboxIndex + 1) % slides.length;
+      openLightbox();
+    }
+  
+    function prevLightbox() {
+      lightboxIndex = (lightboxIndex - 1 + slides.length) % slides.length;
+      openLightbox();
+    }
+  
+    function handleKey(e) {
+      if (e.key === "ArrowRight") nextLightbox();
+      if (e.key === "ArrowLeft") prevLightbox();
+      if (e.key === "Escape") closeLightbox();
+    }
+  
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxNext.addEventListener('click', nextLightbox);
+    lightboxPrev.addEventListener('click', prevLightbox);
+  
+    // Optional: Close on background click
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    
+  </script>
+  
+</body>
+</html>

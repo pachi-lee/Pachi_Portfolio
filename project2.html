@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachi Lee's Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Pachi.JPG">
+
+
+</head>
+<body>
+    <!--navigation bar and sidebar-->
+    <nav class="navbar">
+
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <li ><a href="index.html">Welcome</a></li>
+            <li ><a href="index.html#aboutme">About Me</a></li>
+            <li ><a href="index.html#projects">Projects</a></li>
+            <li ><a href="index.html#resume">Resume</a></li>
+            <li ><a href="index.html#contact">Contact Me</a></li>
+
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </div>
+        <div class= "logo">
+<p><a href="index.html">PL</a></p>
+        </div>
+        <div class="navdiv">
+            <ul>
+                <li class="hideOnMobile"><a href="index.html">Welcome</a></li>
+                <li class="hideOnMobile"><a href="index.html#aboutme">About Me</a></li>
+                <li class="hideOnMobile"><a href="index.html#projects">Projects</a></li>
+                <li class="hideOnMobile"><a href="index.html#resume">Resume</a></li>
+                <li class="hideOnMobile"><a href="index.html#contact">Contact Me</a></li>
+                <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-360v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg></li>
+            
+               
+            </ul>
+        </div>
+    </nav>
+          <div class="myprojects">
+<section>
+    <h1 class="project-title">Portfolio Website</h1>
+
+    <div class="part">
+        <img id="image" src="images/web.png">
+   
+      <h5>Technical Skills learned:</h5>
+        
+        <ul>
+            <li>HTML, CSS, JavaScript </li>
+            <li>Repository: GitHub </li>
+            <li>IDE: VSCode </li>
+        </ul>
+        <p>Created a personal portfolio website using VSCode, HTML, CSS, and JavaScript</p>  
+
+    </div>
+   
+        <div class="part">
+            <a href="https://github.com/pachi-lee" target=_blank title="this takes you to my GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </section>
+</div>
+ 
+</body>
+</html>

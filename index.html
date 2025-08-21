@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" href="Pachi.JPG">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pachi Lee's Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!--navigation bar and sidebar-->
+    <nav class="navbar">
+
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <li ><a href="#welcome">Welcome</a></li>
+            <li ><a href="#aboutme">About Me</a></li>
+            <li ><a href="#projects">Projects</a></li>
+            <li ><a href="#resume">Resume</a></li>
+            <li ><a href="#contact">Contact Me</a></li>
+
+        </ul>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+
+        </div>
+        <div class= "logo">
+<p><a href="index.html">PL</a></p>
+        </div>
+        <div class="navdiv">
+            <ul>
+                <li class="hideOnMobile"><a href="#welcome">Welcome</a></li>
+                <li class="hideOnMobile"><a href="#aboutme">About Me</a></li>
+                <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+                <li class="hideOnMobile"><a href="#resume">Resume</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact Me</a></li>
+                <li class="menu-button" onclick=showSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M160-360v-80h640v80H160Zm0-160v-80h640v80H160Z"/></svg></li>
+            
+               
+            </ul>
+        </div>
+    </nav>
+           <!--welcome-->
+           <section id = "welcome">
+           
+                <div id="container">
+                    <h1 class = "welcometext">Hello, I'm Pachi. </h1>
+                 <h2>Welcome to my professional portfolio. </h2>  
+                   <div class="icon-container">
+                    <a href="https://www.linkedin.com/in/pachi-lee/" target=_blank title = "this takes you to my LinkedIn page"> <i class="fa-brands fa-linkedin"></i></a>
+                
+                    <a href="https://github.com/pachi-lee" target=_blank title="this takes you to my GitHub"><i class="fa-brands fa-github"></i></a>
+                  </div>
+             
+            
+           
+        </div>
+    </section>
+            <!--About me Section-->
+
+<section class="hidden" id="aboutme">
+   <div class="about">
+    <div class="aboutMe">
+        <img  id="headShot" src="images/Pachi.JPG" height="300" width="200">
+    </div>
+    <div class="aboutMe">
+    <h1 class="title-about">About Me</h1>
+
+    <p>I am Pachi a current student at UW-Milwaukee aspiring to become a software engineer. I love building thoughtful software that solves real problems and makes a positive impact. I’m passionate about clean code, always eager to learn, and enjoy collaborating with others to bring great ideas to life. I'm excited to keep growing and creating meaningful products along the way.
+                
+        <br><br>My most recent project is a Movie Webiste with a built in AI tool created to solve my simple issue of finding a movie to watch. 
+    
+        </br/><br> Currently, I am gaining new skills to land an internship position. </p>     
+    </div>    
+</div>
+    </section>
+  
+<!--Projects-->
+
+<section id="projects">
+    <div class="projects">
+    <h1 class="projectTitle">Projects</h1>
+
+  <div class="">
+        <div class="wrapper">
+            <div class="image-wrapper">
+           <a href="project1.html"> <img src="images/meme.png" /></a></div>
+            <div class="header-wrapper">
+              <h1 class="">Movies with/AI</h1> <br>
+            </div>
+          
+          </div>
+          <div >
+            <ul>
+                <li> Django</li>
+                  <li>BootStrap</li>
+                  <li>TMDB API</li>
+                  <li>Python</li>
+            </ul>
+        </div>
+        </div>
+   <div class=>
+      <div class="wrapper">
+        <div class="image-wrapper">
+       <a href="project2.html"> <img class="book-design-image" src="images/web.png" /></a></div>
+        <div class="header-wrapper">
+          <h1>Portfolio</h1>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+      </div>
+
+<div>
+      <div class="wrapper">
+        <div class="image-wrapper">
+       <a href="project3.html"><img src="images/KAB.png" /></a> </div>
+        <div class="header-wrapper">
+          <h1>Research</h1>
+        </div>
+      </div>
+      <div>
+        <ul>
+            <li>Research</li>
+            <li>Data Collection, Analysis, Visualization</li>
+            <li>Teamwork</li>
+
+        </ul>
+      </div>
+    </div>
+
+   
+<!--
+<div class="grid">
+    <div class="box">
+        <div class="wrapper">
+            <div class="image-wrapper">
+            <img src="images/meme.png" /></div>
+            <div class="header-wrapper">
+              <h1>Movies with AI Tool</h1>
+              <h1>See Project</h1>
+            </div>
+          </div>
+    </div>  
+    <div class="box">
+        <div class="title">
+            <h2><a href="project2.html">Portfolio Website</a></h2>
+            <h3>Jan 2025</h3> 
+        </div>
+        <br>
+        <div class="content"><img id="projectImage" src="images/web.png" height="300px" width="300px">
+            <h4>Technical Skills</h4>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+      </div>
+       
+    <div class="box">
+<div class="title">
+    <h2><a href="project3.html">Health Research</a></h2>
+    <h3>Janurary 2022 - April 2023</h3>
+</div>
+<br>
+<div class="content">
+        <img id="projectImage" src="images/KAB.png" height="300px" width="300px" onclick=showContent() >
+        <h5>Technical Skills learned:</h5>
+
+        <ul>
+            <li>R-studio</li>
+            <li>Fischer exact test</li>
+               <li> Multivariable logistic regression Test </li>
+        </ul>
+    </div>
+        </div>
+        </div>
+         -->
+        </div>
+    </section>
+
+
+<!--contact-->
+<div class="resume" id="resume">
+    <section>
+        <a href="documents/PachiLee_Resume.docx" download class="btn btn--download">Download Resume<span class="u-bolder"></span></a>
+    </section>
+
+<div>
+
+<section class="hidden" id="contact">
+  <form action="https://formspree.io/f/xkggdqae" method="POST">
+    <h1>Contact Form</h1>
+    <input type="text" placeholder="First Name" autocomplete="off" required>
+    <input type="text" placeholder="Last Name" autocomplete="off" required>
+    <input type="email" placeholder="Email Address" autocomplete="off" required>
+<textarea rows="5" cols="60" name="message" placeholder="Enter text" autocomplete="off" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</section>
+</body>
+<footer>
+    <div class="container-footer">
+        <div>
+            <p>thank you for visiting</p>
+        </div>
+        <div>created by Pachi Lee</div>
+        <div>Made with HTML, CSS, JavaScript</div>
+    </div>
+</footer>
+</html>
